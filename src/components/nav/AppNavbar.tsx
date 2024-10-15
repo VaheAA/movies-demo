@@ -63,9 +63,16 @@ function AppNavbar() {
         <div
           className={`mt-auto mb-4 w-full transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'} h-24`}>
           <ul className="flex flex-col gap-2 uppercase text-gray-400/80 text-3xl">
-            <li className="cursor-pointer hover:underline">Language</li>
-            <li className="cursor-pointer hover:underline">Get Help</li>
-            <li className="cursor-pointer hover:underline">Exit</li>
+            <li className="cursor-pointer hover:underline">
+              <NavLink to="/language">Language</NavLink>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              {' '}
+              <NavLink to="/help">Get Help</NavLink>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              <NavLink to="/exit">Exit</NavLink>
+            </li>
           </ul>
         </div>
       </div>
