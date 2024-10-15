@@ -32,11 +32,11 @@ function HomePage() {
         if (aIndex === -1) return 1;
         if (bIndex === -1) return -1;
         return aIndex - bIndex;
-      });
+      }).slice(0, 49);
     }
     return data?.TrendingNow.sort(
       (a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime()
-    );
+    ).slice(0, 49);
   }, [data]);
 
   return (
